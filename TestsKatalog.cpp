@@ -172,6 +172,7 @@ struct TreeNode {
 	int data;
 	TreeNode* r, * l;
 };
+
 void create_binary_tree(TreeNode *&root, int data) {
 	if (root != NULL) {
 		cout << "Tree is already created\n";
@@ -259,9 +260,59 @@ void test_binary_tree() {
 	print_binary_tree(root,1);
 }
 
+class FirstTestClass {
+private:
+
+ string data1;
+ string data2;
+
+public:
+
+	string get_data1() {
+		return data1;
+	}
+
+	void set_data1(string input_data1) {
+		data1 = input_data1;
+	}
+
+	string get_data2() {
+		return data2;
+	}
+
+	void set_data2(string input_data2) {
+		data2 = input_data2;
+	}
+
+	string sum_data1_data2() {
+		return data1 + data2;
+	}
+
+	FirstTestClass(string data1, string data2) {
+		this->data1 = data1;
+		this->data2 = data2;
+	}
+};
+
+
+void test_FirstTestClass() {
+	FirstTestClass tester("Just smile ", "today");
+
+	cout << tester.get_data1() << endl;
+
+	cout << tester.get_data2() << endl;
+
+	cout << tester.sum_data1_data2() << endl;
+
+}
+
 int main() {
+
 setlocale(LC_ALL, "ru");
+
 // test_linked_list();
+// 
 // test_binary_tree();
 
+test_FirstTestClass();
 }
